@@ -1,0 +1,6 @@
+apache-airflow
+pandas
+requests
+boto3
+psycopg2-binary
+dbt-postgres

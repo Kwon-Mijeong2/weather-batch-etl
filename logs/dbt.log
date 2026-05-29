@@ -1,0 +1,123 @@
+[0m22:05:15.365506 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018445A8C590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018448F63490>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001844905AED0>]}
+
+
+============================== 22:05:15.388002 | 9c829332-5b37-4be1-97ba-420d1b204ec8 ==============================
+[0m22:05:15.388002 [info ] [MainThread]: Running with dbt=1.12.0-b1
+[0m22:05:15.388002 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\SAMSUNG\\.dbt', 'use_colors': 'True', 'invocation_command': 'dbt run', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m22:05:15.395216 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\SAMSUNG\weather-batch-etl\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m22:05:15.397571 [debug] [MainThread]: Command `dbt run` failed at 22:05:15.397074 after 0.18 seconds
+[0m22:05:15.398575 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000184492DD310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000184492DF290>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000184492DFF50>]}
+[0m22:05:15.399921 [debug] [MainThread]: Flushing usage events
+[0m22:05:17.173886 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m22:06:41.024965 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023D1F055410>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023D1FB4D8D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023D1FEDC190>]}
+
+
+============================== 22:06:41.033011 | 98212b23-745a-4638-8f5a-d008c588791b ==============================
+[0m22:06:41.033011 [info ] [MainThread]: Running with dbt=1.12.0-b1
+[0m22:06:41.036366 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\SAMSUNG\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'use_colors': 'True', 'invocation_command': 'dbt init weather_dbt', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m22:06:41.064523 [debug] [MainThread]: Starter project path: C:\Users\SAMSUNG\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\include\starter_project
+[0m22:06:41.120325 [info ] [MainThread]: Setting up your profile.
+[0m22:07:17.272413 [info ] [MainThread]: Profile weather_dbt written to C:\Users\SAMSUNG\.dbt\profiles.yml using target's profile_template.yml and your supplied values.
+[0m22:07:17.293587 [info ] [MainThread]: Running dbt debug to validate the project...
+[0m22:07:17.297407 [info ] [MainThread]: dbt version: 1.12.0-b1
+[0m22:07:17.297911 [info ] [MainThread]: python version: 3.11.9
+[0m22:07:17.297911 [info ] [MainThread]: python path: C:\Users\SAMSUNG\AppData\Local\Programs\Python\Python311\python.exe
+[0m22:07:17.300621 [info ] [MainThread]: os info: Windows-10-10.0.19045-SP0
+[0m22:07:17.340169 [info ] [MainThread]: Using profiles dir at C:\Users\SAMSUNG\.dbt
+[0m22:07:17.340169 [info ] [MainThread]: Using profiles.yml file at C:\Users\SAMSUNG\.dbt\profiles.yml
+[0m22:07:17.340169 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\SAMSUNG\weather-batch-etl\weather_dbt\dbt_project.yml
+[0m22:07:17.350723 [info ] [MainThread]: adapter type: postgres
+[0m22:07:17.350723 [info ] [MainThread]: adapter version: 1.10.0
+[0m22:07:17.458425 [info ] [MainThread]: Configuration:
+[0m22:07:17.458425 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m22:07:17.458425 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m22:07:17.458425 [info ] [MainThread]: Required dependencies:
+[0m22:07:17.458425 [debug] [MainThread]: Executing "git --help"
+[0m22:07:17.485898 [info ] [MainThread]:  - git [[31mERROR[0m]
+
+[0m22:07:17.485898 [info ] [MainThread]: Connection:
+[0m22:07:17.485898 [info ] [MainThread]:   host: postgres
+[0m22:07:17.485898 [info ] [MainThread]:   port: 5432
+[0m22:07:17.485898 [info ] [MainThread]:   user: airflow
+[0m22:07:17.485898 [info ] [MainThread]:   database: airflow
+[0m22:07:17.485898 [info ] [MainThread]:   schema: public
+[0m22:07:17.485898 [info ] [MainThread]:   connect_timeout: 10
+[0m22:07:17.485898 [info ] [MainThread]:   role: None
+[0m22:07:17.485898 [info ] [MainThread]:   search_path: None
+[0m22:07:17.502170 [info ] [MainThread]:   keepalives_idle: 0
+[0m22:07:17.505642 [info ] [MainThread]:   sslmode: None
+[0m22:07:17.506323 [info ] [MainThread]:   sslcert: None
+[0m22:07:17.506323 [info ] [MainThread]:   sslkey: None
+[0m22:07:17.506323 [info ] [MainThread]:   sslrootcert: None
+[0m22:07:17.506323 [info ] [MainThread]:   application_name: dbt
+[0m22:07:17.510256 [info ] [MainThread]:   retries: 1
+[0m22:07:17.510256 [info ] [MainThread]: Registered adapter: postgres=1.10.0
+[0m22:07:17.823449 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m22:07:17.956957 [debug] [MainThread]: Using postgres connection "debug"
+[0m22:07:17.956957 [debug] [MainThread]: On debug: select 1 as id
+[0m22:07:17.956957 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m22:07:20.245324 [debug] [MainThread]: Postgres adapter: Got a retryable error when attempting to open a postgres connection.
+1 attempts remaining. Retrying in 0 seconds.
+Error:
+could not translate host name "postgres" to address: Name or service not known
+
+[0m22:07:22.520203 [debug] [MainThread]: Postgres adapter: Error running SQL: select 1 as id
+[0m22:07:22.521825 [debug] [MainThread]: Postgres adapter: Rolling back transaction.
+[0m22:07:22.523388 [debug] [MainThread]: On debug: No close available on handle
+[0m22:07:22.523388 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m22:07:22.528070 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m22:07:22.528070 [info ] [MainThread]: Error from git --help: Could not find command, ensure it is in the user's PATH and that the user has permissions to run it: "git"
+
+[0m22:07:22.530678 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  could not translate host name "postgres" to address: Name or service not known
+  
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m22:07:22.530678 [info ] [MainThread]: Your new dbt project "weather_dbt" was created!
+Initialized new project in C:\Users\SAMSUNG\weather-batch-etl\weather_dbt\weather_dbt
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m22:07:22.530678 [info ] [MainThread]: [31mYour profile may need adjustments. You can find the logs of `dbt debug` above[0m
+[0m22:07:22.537405 [debug] [MainThread]: Command `dbt init` succeeded at 22:07:22.536919 after 41.62 seconds
+[0m22:07:22.538052 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m22:07:22.538052 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023D1FB4D8D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023D1FF82E90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023D211F72D0>]}
+[0m22:07:22.540368 [debug] [MainThread]: Flushing usage events
+[0m22:07:23.945291 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m22:10:36.761770 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000207F248E510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000207F1DDCF10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000207F248DB50>]}
+
+
+============================== 22:10:36.761770 | 6d9a1a9d-04a0-4a4f-b0b2-80ebe32934df ==============================
+[0m22:10:36.761770 [info ] [MainThread]: Running with dbt=1.12.0-b1
+[0m22:10:36.777890 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\SAMSUNG\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt run', 'use_colors': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m22:10:36.777890 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\SAMSUNG\weather-batch-etl\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m22:10:36.777890 [debug] [MainThread]: Command `dbt run` failed at 22:10:36.777890 after 0.23 seconds
+[0m22:10:36.777890 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000207F248F310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000207F248DD50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000207F248FE90>]}
+[0m22:10:36.777890 [debug] [MainThread]: Flushing usage events
+[0m22:10:38.404065 [debug] [MainThread]: An error was encountered while trying to flush usage events

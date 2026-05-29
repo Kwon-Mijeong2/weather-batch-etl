@@ -1,0 +1,73 @@
+name: dbt CI
+
+on:
+
+  push:
+    branches:
+      - main
+
+  pull_request:
+
+jobs:
+
+  dbt:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+
+      - name: Install dbt
+        run: pip install dbt-postgres
+
+      - name: Create profiles.yml
+
+        run: |
+
+          mkdir -p ~/.dbt
+
+          cat > ~/.dbt/profiles.yml <<EOF
+
+          weather_dbt:
+
+            target: dev
+
+            outputs:
+
+              dev:
+                type: postgres
+
+                host: ${{ secrets.DB_HOST }}
+                user: ${{ secrets.DB_USER }}
+                password: ${{ secrets.DB_PASSWORD }}
+
+                port: 5432
+                dbname: ${{ secrets.DB_NAME }}
+
+                schema: public
+
+                threads: 1
+
+          EOF
+
+      - name: Run dbt
+
+        run: |
+
+          cd dbt/weather_dbt
+          dbt deps
+          dbt run
+
+      - name: Test dbt
+
+        run: |
+
+          cd dbt/weather_dbt
+          dbt test
