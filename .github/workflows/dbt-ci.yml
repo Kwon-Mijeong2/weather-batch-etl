@@ -45,7 +45,7 @@ jobs:
       - name: Run dbt
         working-directory: weather_dbt
         run: |
-          dbt deps --profiles-dir .
-          dbt seed --profiles-dir .
-          dbt run --profiles-dir .
-          dbt test --profiles-dir ..
+          dbt deps --profiles-dir . --target dev
+          dbt seed --profiles-dir . --target dev
+          dbt run --profiles-dir . --target dev
+          dbt test --profiles-dir . --target dev
