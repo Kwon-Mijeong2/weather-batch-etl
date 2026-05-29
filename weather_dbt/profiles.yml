@@ -3,7 +3,7 @@ weather_dbt:
   outputs:
     dev:
       type: postgres
-      host: postgres
+      host: localhost
       user: airflow
       password: airflow
       port: 5432
