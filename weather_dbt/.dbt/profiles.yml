@@ -1,13 +1,12 @@
-
 weather_dbt:
   outputs:
     dev:
       type: postgres
-      host: "{{ env_var('DB_HOST') }}"
+      host: localhost
       port: 5432
-      user: "{{ env_var('DB_USER') }}"
-      password: "{{ env_var('DB_PASSWORD') }}"
-      dbname: "{{ env_var('DB_NAME') }}"
+      user: airflow
+      password: airflow
+      dbname: airflow
       schema: public
       threads: 1
   target: dev
