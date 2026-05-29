@@ -38,6 +38,9 @@ jobs:
       - name: Install dbt
         run: |
           pip install dbt-postgres
+          
+      - name: Wait for Postgres
+        run: sleep 15
 
       - name: Run dbt
         working-directory: weather_dbt
