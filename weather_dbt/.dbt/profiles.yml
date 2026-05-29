@@ -1,24 +1,13 @@
-my_dbt_project:
-  outputs:
-    dev:
-      dbname: marketing
-      host: mi
-      pass: "0321\0Rdodzd011"
-      port: 8080
-      schema: order_id, customer_id, amount
-      threads: 1
-      type: postgres
-      user: mi
-  target: dev
+
 weather_dbt:
   outputs:
     dev:
-      dbname: airflow
-      host: localhost
-      pass: airflow
+      type: postgres
+      host: "{{ env_var('DB_HOST') }}"
       port: 5432
+      user: "{{ env_var('DB_USER') }}"
+      password: "{{ env_var('DB_PASSWORD') }}"
+      dbname: "{{ env_var('DB_NAME') }}"
       schema: public
       threads: 1
-      type: postgres
-      user: airflow
   target: dev
