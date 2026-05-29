@@ -37,7 +37,7 @@ jobs:
 
       - name: Install dbt
         run: |
-          pip install dbt-core==1.10.2 dbt-postgres==1.10.0
+          pip install dbt-postgres
           
       - name: Wait for Postgres
         run: sleep 15
