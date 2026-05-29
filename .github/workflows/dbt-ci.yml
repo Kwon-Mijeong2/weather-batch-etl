@@ -40,8 +40,8 @@ jobs:
           pip install dbt-postgres
 
       - name: Run dbt
+        working-directory: weather_dbt
         run: |
-          cd weather_dbt
-          dbt deps
-          dbt run
-          dbt test
+          dbt deps --profiles-dir .
+          dbt run --profiles-dir .
+          dbt test --profiles-dir .
