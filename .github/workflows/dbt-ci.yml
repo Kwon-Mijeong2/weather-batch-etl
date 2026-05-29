@@ -61,7 +61,7 @@ jobs:
 
         run: |
 
-          cd dbt/weather_dbt
+          cd weather_dbt
           dbt deps
           dbt run
 
